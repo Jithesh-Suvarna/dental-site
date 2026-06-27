@@ -1,0 +1,6 @@
+{
+  "name": "SmileCare Dental Clinic",
+  "description": "Premium, modern dental clinic application supporting interactive booking requests and state-of-the-art treatments in Mumbai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

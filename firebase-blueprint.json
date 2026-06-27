@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "appointment": {
+      "title": "Appointment",
+      "description": "Details of a booked dental appointment",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the patient"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Contact phone number"
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the patient"
+        },
+        "service": {
+          "type": "string",
+          "description": "The type of dental treatment requested"
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Requested date for the appointment"
+        },
+        "time": {
+          "type": "string",
+          "description": "Preferred time slot"
+        },
+        "message": {
+          "type": "string",
+          "description": "Optional patient comments or symptoms"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO timestamp of when the appointment was created"
+        }
+      },
+      "required": [
+        "name",
+        "phone",
+        "email",
+        "service",
+        "date",
+        "time",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/appointments/{appointmentId}": {
+      "schema": "appointment",
+      "description": "Collection of dental clinic appointments booked by users"
+    }
+  }
+}
